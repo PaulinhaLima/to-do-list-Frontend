@@ -6,7 +6,92 @@
     <title>To do list Paulinha Lima</title>
 </head>
 <body>
-    test
-    
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list Paulinha Lima</title>
+</head>
+<body>
+
+  <header id="encabezado" class="encabezado">
+    <div class="contenedor">
+      <h1 id="titulo_app" class="titulo_app">To Do List </h1>
+      <p id="subtitulo_app" class="subtitulo_app">
+        mi proyecto to do list version 01
+      </p>
+    </div>
+  </header>
+
+  <main id="principal" class="principal">
+
+    <section id="seccion_crear" class="seccion seccion__crear" aria-label="Crear tarea">
+      <div class="contenedor">
+        <form id="formulario_tarea" class="formulario_tarea" autocomplete="off">
+
+          <label for="input_titulo" class="etiqueta">Nueva tarea</label>
+
+          <div class="fila">
+            <input
+              id="input_titulo"
+              name="titulo"
+              class="input input_texto"
+              type="text"
+              placeholder="Escribe una tarea y presiona Enter…"
+              required
+              maxlength="255"
+            />
+
+            <button id="btn_agregar" class="boton boton_primario" type="submit">
+              Agregar
+            </button>
+          </div>
+
+          <p id="mensaje_formulario" class="mensaje_formulario" role="status" aria-live="polite"></p>
+
+        </form>
+      </div>
+    </section>
+
+    <section id="seccion_controles" class="seccion seccion__controles" aria-label="Controles">
+      <div class="contenedor controles">
+
+        <div class="filtros" role="tablist" aria-label="Filtros de tareas">
+          <button id="filtro_todas" class="chip chip_activo" type="button" data-filtro="todas">
+            Todas
+          </button>
+
+          <button id="filtro_pendientes" class="chip" type="button" data-filtro="pendientes">
+            Pendientes
+          </button>
+
+          <button id="filtro_completadas" class="chip" type="button" data-filtro="completadas">
+            Completadas
+          </button>
+        </div>
+
+        <div class="resumen">
+          <span id="contador_pendientes" class="contador">
+            0 pendientes
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="seccion_lista" class="seccion seccion__lista" aria-label="Lista de tareas">
+      <div class="contenedor">
+
+        <div id="estado" class="estado" role="status" aria-live="polite"></div>
+
+        <ul id="lista_tareas" class="lista_tareas" aria-label="Tareas">
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
