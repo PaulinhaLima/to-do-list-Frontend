@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list Paulinha Lima</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
 </head>
+
 <body>
-  <main id="principal" class="principal">
 
-    <section id="seccion_crear" class="seccion seccion__crear" aria-label="Crear tarea">
-      <div class="contenedor">
-        <form id="formulario_tarea" class="formulario_tarea" autocomplete="off">
 
-          <label for="input_titulo" class="etiqueta">Nueva tarea</label>
+    <header class="encabezado">
+        <div class="contenedor">
+            <h1 id="titulo_app" class="titulo_app" hidden></h1>
+            <img src="img/logo.png" alt="logo de la aplicación" class="logo_app">
+        </div>
+    </header>
 
-          <div class="fila">
-            <input
-              id="input_titulo"
-              name="titulo"
-              class="input input_texto"
-              type="text"
-              placeholder="Escribe una tarea y presiona Enter…"
-              required
-              maxlength="255"
-            />
+    <section class="seccion seccion__crear">
+        <div class="contenedor">
 
-            <button id="btn_agregar" class="boton boton_primario" type="submit">
-              Agregar
-            </button>
-          </div>
+            <form id="formulario_tarea" class="formulario_tarea" autocomplete="off">
 
-          <p id="mensaje_formulario" class="mensaje_formulario" role="status" aria-live="polite"></p>
+                <div class="fila">
 
-        </form>
-      </div>
+                    <input id="input_titulo" name="titulo" class="input input_texto" type="text" placeholder="Añadir un elemento de tarea pendiente..." required maxlength="255">
+
+                    <button id="btn_agregar" class="boton boton_primario" type="submit">
+                        Agregar
+                    </button>
+
+                </div>
+
+                <p id="mensaje_formulario" class="mensaje_formulario" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </div>
     </section>
 
-    <section id="seccion_controles" class="seccion seccion__controles" aria-label="Controles">
-      <div class="contenedor controles">
+    <main class="principal">
 
-        <div class="filtros" role="tablist" aria-label="Filtros de tareas">
-          <button id="filtro_todas" class="chip chip_activo" type="button" data-filtro="todas">
-            Todas
-          </button>
+        <div class="contenedor distribucion_principal">
 
-          <button id="filtro_pendientes" class="chip" type="button" data-filtro="pendientes">
-            Pendientes
-          </button>
+            <section class="tarjeta_tareas">
 
-          <button id="filtro_completadas" class="chip" type="button" data-filtro="completadas">
-            Completadas
-          </button>
+                <div class="tarjeta_encabezado">
+
+                    <div class="tarjeta_accion">
+                        Marcar todo como terminado
+                    </div>
+
+                    <div class="tarjeta_mensaje">
+                        Actúa ahora, simplifica la vida ☕
+                    </div>
+
+                </div>
+
+                <div class="tarjeta_cuerpo">
+
+                    <div id="estado" class="estado" role="status" aria-live="polite"></div>
+
+                    <ul id="lista_tareas" class="lista_tareas" aria-label="Lista de tareas">
+                    </ul>
+
+                </div>
+
+                <div class="tarjeta_pie">
+                    <span id="contador_pendientes">
+                        0 artículos restantes
+                    </span>
+                </div>
+
+            </section>
+
+            <aside class="panel_lateral">
+
+                <div class="panel_encabezado">
+                    ABIERTO ✨
+                </div>
+
+                <div class="panel_cuerpo">
+
+                    <button id="filtro_todas" class="panel_opcion opcion_activa" type="button" data-filtro="todas">
+                        Todo
+                    </button>
+
+                    <button id="filtro_pendientes" class="panel_opcion" type="button" data-filtro="pendientes">
+                        Pendientes
+                    </button>
+
+                    <button id="filtro_completadas" class="panel_opcion" type="button" data-filtro="completadas">
+                        Completadas
+                    </button>
+                </div>
+
+            </aside>
+
         </div>
 
-        <div class="resumen">
-          <span id="contador_pendientes" class="contador">
-            0 pendientes
-          </span>
-        </div>
+    </main>
 
-      </div>
-    </section>
+    <script src="./js/app.js"></script>
 
-    <section id="seccion_lista" class="seccion seccion__lista" aria-label="Lista de tareas">
-      <div class="contenedor">
-
-        <div id="estado" class="estado" role="status" aria-live="polite"></div>
-
-        <ul id="lista_tareas" class="lista_tareas" aria-label="Tareas">
-        </ul>
-
-      </div>
-    </section>
-
-  </main>
 </body>
+
+
 </html>

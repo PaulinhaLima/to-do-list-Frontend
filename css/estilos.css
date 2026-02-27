@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #2b2b2b;
+    /* Fondo celeste con puntitos (mockup) */
+    background: radial-gradient(rgba(0, 0, 0, .06) 1.2px, transparent 1.2px) 0 0/18px 18px, radial-gradient(rgba(0, 0, 0, .06) 1.2px, transparent 1.2px) 9px 9px/18px 18px, #eaf6fc;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.encabezado {
+    text-align: center;
+    padding: 26px 0 8px;
+}
+
+
+/*.titulo_app {
+display:none;
+
+    margin: 0;
+    font-size: 68px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #f7e48b;
+    -webkit-text-stroke: 3px #2b2b2b;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, .22);
+}*/
+
+.subtitulo_app {
+    display: none;
+}
+
+.seccion__crear {
+    margin-top: 10px;
+}
+
+.seccion__crear .contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario_tarea {
+    width: min(760px, 92vw);
+    margin: 0;
+}
+
+.etiqueta {
+    display: none;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    border: 3px solid #2b2b2b;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, .22);
+}
+
+.input_texto {
+    border: 0;
+    outline: none;
+    padding: 16px 16px;
+    font-size: 18px;
+}
+
+.input_texto::placeholder {
+    color: rgba(0, 0, 0, .22);
+}
+
+.boton_primario {
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    background: #f6c6de;
+    color: #2b2b2b;
+}
+
+.boton_primario:active {
+    transform: translateY(2px);
+}
+
+.mensaje_formulario {
+    min-height: 18px;
+    margin: 10px 4px 0;
+    color: rgba(0, 0, 0, .22);
+    font-size: 14px;
+}
+
+.principal {
+    margin-top: 18px;
+}
+
+.distribucion_principal {
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 28px;
+    align-items: start;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.tarjeta_tareas {
+    background: #ffffff;
+    border: 3px solid #2b2b2b;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, .22);
+}
+
+.tarjeta_encabezado {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    border-bottom: 2px solid #2b2b2b;
+}
+
+.tarjeta_accion {
+    background: #90d6c8;
+    padding: 10px 14px;
+    font-size: 17px;
+    border-right: 2px solid #2b2b2b;
+}
+
+.tarjeta_mensaje {
+    padding: 10px 14px;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.tarjeta_cuerpo {
+    padding: 22px;
+    min-height: 440px;
+}
+
+.tarjeta_pie {
+    border-top: 2px solid #2b2b2b;
+    padding: 10px 14px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.estado {
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, .22);
+    font-size: 14px;
+}
+
+.lista_tareas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarea_item {
+    display: grid;
+    grid-template-columns: 46px 1fr 46px;
+    gap: 14px;
+    align-items: center;
+    background: #d0f4f0;
+    border: 3px solid #2b2b2b;
+    border-radius: 14px;
+    padding: 14px 14px;
+    margin: 18px 0;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, .22);
+}
+
+.tarea_check {
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border-radius: 999px;
+    border: 3px solid #2b2b2b;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.tarea_check:checked {
+    background: #9467d4;
+}
+
+.tarea_texto {
+    font-size: 20px;
+}
+
+.tarea_texto.completada {
+    text-decoration: line-through;
+    opacity: .65;
+}
+
+
+/* botoon X */
+
+.tarea_eliminar {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #2b2b2b;
+    border-radius: 999px;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.tarea_eliminar:active {
+    transform: translateY(2px);
+}
+
+.tarea_editar_input {
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid #2b2b2b;
+    border-radius: 3%;
+    padding: 6px 10px;
+    outline: none;
+    background: #ffffff;
+}
+
+.panel_lateral {
+    background: #ffffff;
+    border: 3px solid #2b2b2b;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, .22);
+}
+
+.panel_encabezado {
+    background: #90d6c8;
+    border-bottom: 2px solid #2b2b2b;
+    text-align: center;
+    padding: 10px 10px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.panel_cuerpo {
+    background: #ffd6e8;
+}
+
+.panel_opcion {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, .35);
+    background: transparent;
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14.5px;
+    color: rgba(0, 0, 0, .80);
+}
+
+.panel_opcion:first-child {
+    border-top: 0;
+}
+
+.opcion_activa {
+    background: #f6c6de;
+    font-weight: 700;
+}
